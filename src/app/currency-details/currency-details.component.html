@@ -1,0 +1,20 @@
+<h2 class="col-6 col-offset-2">
+  {{(currency.id | json)}}
+</h2>
+<ul>
+  <li>
+    code:   {{(currency.attributes.code | json)}}
+  </li>
+  <li>
+    name:   {{(currency.attributes.name | json)}}
+  </li>
+  <li>
+    currency_type:  {{(currency.attributes.currency_type | json)}}
+  </li>
+  <li>
+    code_iso_numeric3:    {{(currency.attributes.code_iso_numeric3 | json)}}
+  </li>
+  <li>
+    code_iso_alpha3:    {{(currency.attributes.code_iso_numeric3 | json)}}
+  </li>
+</ul>

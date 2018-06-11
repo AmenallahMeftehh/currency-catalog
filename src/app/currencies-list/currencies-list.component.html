@@ -1,0 +1,25 @@
+<h5 class="col-6 col-offset-3 titleColor"> Available currencies </h5>
+<div class="row divSearch">
+  <div class="col-xs-6 col-sm-4 col-md-2 col-lg-1">
+  <label for="sel1">Filter Text:</label>
+  <input type="text" class="form-control textBox " id="filter"
+         [(ngModel)]="filter" name="filter">
+  </div>
+  <div class="col-xs-6 col-sm-4 col-md-2 col-lg-1 form-group">
+    <label for="sel1">Filter By:</label>
+    <select  [(ngModel)]="selectedValue" class="form-control" id="sel1">
+      <option selected="selected" value="id">ID</option>
+      <option value="code">Code</option>
+      <option value="name">Name</option>
+      <option value="currency_type">Type</option>
+    </select>
+  </div>
+  </div>
+<div class="row">
+<div class="col-xs-6 col-sm-3 col-md-2 col-lg-2 divCurrency"*ngFor="let cur of currenciesList | searchFilter: filter:selectedValue">
+  <div (click)="navigateToDetailsInterface(cur.id)" class="divClass">ID:{{cur.id}} ;
+    Type: {{cur.attributes['currency_type']}};
+    Symbol: {{cur.attributes['symbol']}}
+  </div>
+</div>
+</div>

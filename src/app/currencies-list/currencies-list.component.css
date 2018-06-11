@@ -1,0 +1,15 @@
+.divClass{
+  height: 3rem;
+  border: 1px solid black;
+  font-family: "Al Nile";
+  font-size: small;
+  margin: 0.2rem;
+
+  background-color: white;
+}
+.divCurrency{
+  display: inline-grid;
+}
+.titleColor{
+  color: bisque;
+}
